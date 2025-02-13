@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.block{
+    height: 60vh;  
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    overflow: hidden;
+    
+}
+.block > div{
+    width: 700px;
+    background-color: rgb(38, 57, 52);
+    position: relative;
+    left: -50%;
+    z-index: 1;
+}
+.block > div:nth-child(2){
+    left: -100%;
+    background-color: rgb(35, 42, 36);
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 45% 50%, 0% 0%);
+    width: 700px;
+    z-index: 2;
+    display:grid;
+    align-items: center;
+    justify-items: center;
+    padding: 0 100px;
+    
+    
+}
+.block > div:nth-child(3){
+    width:80vw;
+    left: -100%;
+    left: -110%;
+    background: url('https://pbs.twimg.com/media/FI73hovX0Ac8a8l.jpg') 100% 50% / contain;
+    transition: all 0.5s ease-in-out;
+    z-index: 0;
+}
+@media (max-width:1120px){
+    .block > div:nth-child(3) {
+        left: -140%;
+    }
+
+}
+.line{
+    position: absolute;
+    top: 1%;
+    left: 69%;
+    height: 63%;
+    width: 3px;
+    background-color: rgb(108, 108, 108);
+    transform: rotate(-55deg);
+
+}
+.list {
+    margin-left: 104px;
+}
+.list:first-child{
+    margin-top: 36px;
+
+}
+.list *:not(.list){
+    margin-bottom:  12px; ;
+}
+.title {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.title span:last-child {
+    display: block;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    
+}
+.text {
+    max-width: 200px;
+    font-size: small;
+    position: relative;
+    padding-left: 20px;
+    letter-spacing: 1px;
+    color: rgb(108, 108, 108);
+    
+}
+.text::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 3px;
+    left: 0px;
+    top: 7px;
+    height: 40px;
+    background-color: rgb(100, 100, 100);
+    
+
+}
