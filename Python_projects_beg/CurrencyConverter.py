@@ -49,7 +49,7 @@ def main():
     initial_currency = get_currency("Initial")
     convert_into_currency = get_currency("Converted into")
     converted = show_result(initial_currency,convert_into_currency,amount)
-    print(f"Your {amount:*^10} {initial_currency} is equal to {converted:.2f} in {convert_into_currancy}")
+    print(f"Your {amount:*^10} {initial_currency} is equal to {converted:.2f} in {convert_into_currency}")
 
 # to run it when we execute the code directly
 if __name__ == "__main__":
