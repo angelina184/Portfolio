@@ -4,24 +4,34 @@ SCISSORS = 's'
 PAPER = 'p'
 choices = ROCK,PAPER,SCISSORS
 
-def user():
-    while True:
-        try:
-            user_choice = input("Rock,Paper or Scissor? (r/p/s): ").lower()
-            if user_choice.isdigit() or user_choice not in choices:
-                raise ValueError
-            if user_choice == ROCK:
-                print("Your choice is: rock 🗻")
-                return ROCK
-            if user_choice == PAPER:
-                print("Your choice is: paper 📃")
-                return PAPER
-            if user_choice == SCISSORS:
-                print("Your choice is: scissors ✂️")
-                return SCISSORS
-        except ValueError:
-            print(f"Invalid choice"\
-            "\nLet's start again")
+def choice_validator(func):
+    def wrapper(*args, **kwargs):
+        while True:
+            try:
+                user_choice = func(*args, **kwargs)
+                if user_choice.isdigit() or user_choice not in choices:
+                    raise ValueError
+                return user_choice
+            except ValueError:
+                print(f"Invalid choice"\
+                "\nLet's start again")
+    return wrapper
+
+@choice_validator
+def user_input():
+    return input("Rock,Paper or Scissor? (r/p/s): ").lower()
+
+def user_game():
+    user_choice = user_input()
+    if user_choice == ROCK:
+        print("Your choice is: rock 🗻")
+        return ROCK
+    if user_choice == PAPER:
+        print("Your choice is: paper 📃")
+        return PAPER
+    if user_choice == SCISSORS:
+        print("Your choice is: scissors ✂️")
+        return SCISSORS
             
 
 def computer():
@@ -65,7 +75,7 @@ def fight(user,computer):
         
 
 def new_game():
-    fight(user = user(),computer=computer())
+    fight(user = user_game(),computer=computer())
 
 new_game()
 
