@@ -1,0 +1,79 @@
+* {
+    font-family: arial, 'Times New Roman', serif;
+    font-size: 1em;
+    background-color: rgb(253, 209, 243);}
+h1,h2,h3,h5 {
+    color: rgb(68, 4, 71);}
+h5 {
+    font-family: "Courier New", monospace;}
+i {
+    color: rgb(178, 4, 4);}
+li {
+    color: rgb(43, 0, 0);}
+ol li {
+    color: blue;}
+a:link {
+    color: darkgreen;
+    text-decoration: none; 
+}
+a:visited {
+    color: rgb(255, 32, 32);}
+a:hover {
+    color: #00b7ff;
+    text-decoration: underline;
+}
+h3+p {
+    color: rgb(46, 2, 155);}
+h2~p {
+    color: rgb(151, 2, 64);}
+table.orange{
+    color: rgb(231, 127, 0);
+    border: 1cm, outset #691a00;
+    padding: 1cm;
+    background-color: #f7ff19;
+    opacity: 0.5;} 
+    <!-- можно вставить inherit-->
+#top{
+    color: rgb(106, 0, 255);}
+p.quote{
+   font-weight: bold;
+   font-style: italic; 
+}
+p>span{
+    text-transform: capitalize !important;
+}
+.big_text {
+    background-color: rgb(158, 254, 204) !important;
+    line-height: 4em !important;
+    padding: 10px !important;
+    text-shadow: 20px -15px 2px #b91010;
+}
+.big_text span{
+    text-decoration: underline red;
+}
+.big_text h1{
+    text-transform: uppercase;
+    letter-spacing: 1em;
+    word-spacing: 3em;
+    text-align: center;
+}
+<!--двигать текст в ручную text-indent-->
+#animal_1,#animal_2,#animal_3,#top{
+    text-align: center;}
+    <!--тоже есть verica-align-->
+input {
+    color: #ff4405;
+    border: 1cm dashed yellow;
+    padding: 6px 12px 6px 12px;
+}
+input ::placeholder {
+    background-color: #00b7ff;
+}
+input.submit:hover {
+      background-color: #b91010;
+}
+.text2 p{
+    height: 55%;
+    width: 75%;
+    background-color: rgb(178, 255, 13);
+}

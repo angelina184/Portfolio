@@ -1,0 +1,39 @@
+h2,p {
+    width: 450px;
+    font-size: 90%;
+    line-height: 1.2em;
+    text-align: center;
+    border-bottom: 4px groove purple;
+    margin: 59px auto 10px auto;
+}
+h2 {
+    color: blue;
+    border-bottom: 3px dotted rgb(91, 7, 7) ;
+}
+p.two {
+    min-height: 10px;
+    min-width: 30px;
+    overflow: scroll;
+}
+p.one {
+    border-width: 50px 35px 24px 12px;
+    border-color: blue yellow green purple;
+    border-style: dotted;
+    padding: 50px;
+    text-align: left;
+}
+p.three{
+    border: 7px dashed orangered;
+}
+p.for{
+    width: auto;
+    border: 10px double rosybrown;
+    padding: 20px;
+}
+li{
+    display: inline;
+    margin-right: 100px;
+}
+li.none{
+    visibility: hidden;
+}

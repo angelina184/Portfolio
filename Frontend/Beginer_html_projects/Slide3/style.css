@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.block {
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 1fr 3fr
+}
+.block__le {
+    background-color: rgb(253, 106, 206);
+    color: black;
+    padding: 120px 60px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+.block__ri {
+    background-color: rgb(250, 174, 202);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 60px 60px;
+    align-content: center;
+}
+.main_title{
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing:2px;
+
+}
+.context {
+    display:grid;
+    align-content:end;
+    border-left: 4px solid black;
+    padding-left: 10px;
+}
+.smal_title {
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 10px;
+    opacity: 0.5;
+    
+}
+.text {
+    letter-spacing: 1px;
+    font-size: small;
+    opacity: 0.5;
+}
+.card {
+    outline: 1px solid rgb(0, 0, 0);
+    display: grid;
+    justify-items: center;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.image {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    clip-path: circle(50% at 50% 50%);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.image svg{
+    width: 60px;
+    height: 60px;
+}
+.image path {
+    fill:rgb(255, 63, 226)
+}
+.card_title {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    padding-top: 20px;
+}
+.card_text {
+    padding: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+}

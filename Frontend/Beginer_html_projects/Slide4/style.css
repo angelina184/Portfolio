@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.block {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    background-color: antiquewhite;
+}
+.block__le {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+.block__le > div:first-child{
+    justify-self: end;
+    text-align: left;
+}
+.square {
+    width: 30vh;
+    height: 30vh;
+    position:relative;
+    right: 7px;
+    background-color: aquamarine;
+    transform: rotate(45deg);
+    margin-bottom: 10vh;
+    box-shadow: 0 9vw 20vh rgb(0, 0, 0);
+}
+.square::before{
+    content: "";
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    width: 3px;
+    left: -10%;
+    background-color: blueviolet;
+}
+.square:last-child{
+    top: 0%;
+    margin-bottom: 0;
+
+}
+.square:last-child::before{
+    left: initial;
+    right: -10%;
+}
+.txt + .square {
+    margin-top: 10vh;
+    margin-bottom: 0;
+}
+.block__le > div:first-child .txt{
+    border-left: 5px solid rgb(42, 0, 0);
+    padding-left: 20px;
+}
+.block__le > div:nth-child(2) .txt{
+    border-left: 5px solid rgb(42, 0, 0);
+    padding-left: 20px;
+}
+.square_bg {
+    
+    height: 150%;
+    width: 150%;
+    border: 5px solid rgb(0, 0, 0);
+    background-position:center;
+    background-size: cover;
+    transform: rotate(-50deg);
+}
+.overflow {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+    overflow: hidden;
+}
+.txt {
+    max-width: 200px;
+}
+.block_rht {
+    outline: 2px solid red;
+    text-align: right;
+    padding-top: 100px;
+    padding-right: 60px;
+    display: grid;
+    justify-items: end;
+
+}
+.title {
+    text-transform: uppercase;
+    font-size: 50px;
+    letter-spacing: 4px;
+    margin-bottom: 70px;
+    color: rgba(55, 2, 2, 0.819);
+
+}
+.lable {
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 70px;
+    color: rgba(55, 2, 2, 0.476);
+}
+.text {
+    display: inline-block;
+    color: rgb(38, 1, 1);
+    margin-bottom: 70px;
+}
+.line {
+    display: grid;
+    height: 300px;
+    width: 4px;
+    background-color: brown;
+}
